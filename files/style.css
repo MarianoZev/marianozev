@@ -289,6 +289,10 @@ body, html {
 .image-container:hover .hover-text {
   opacity: 1;                        /* aparece el texto al hover */
 }
+.enlaces p {
+  word-break: break-all;
+  overflow-wrap: anywhere;
+}
 /*------ROWS Y COURSE-COL------*/
 .row-2{
   text-align: justify;

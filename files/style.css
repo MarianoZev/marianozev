@@ -77,9 +77,8 @@ nav {
 
 /* PRESENTATION */
 .presentation {
-  width: 100%;
-  height: 80vh;       /* sección hero ocupa 80% del viewport */
-  max-height: 80vh;
+  width: 100vw;
+  height: 100vh; /* siempre full screen */
   position: relative;
   overflow: hidden;
 }
@@ -88,9 +87,9 @@ nav {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 100%;       /* cubre ancho */
-  height: 100%;      /* cubre alto de la sección */
-  object-fit: cover;  /* mantiene proporción y cubre la sección */
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
   transform: translate(-50%, -50%);
 }
 
@@ -599,12 +598,3 @@ nav.scrolled {
 
 
 
-@media (max-width: 768px) {
-  .presentation {
-    height: 60vh;    /* más pequeña en mobile */
-  }
-
-  .nav-links ul li a {
-    font-size: 0.9rem; 
-  }
-}

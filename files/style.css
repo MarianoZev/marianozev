@@ -62,22 +62,22 @@ nav {
 /* HERO / PRESENTATION */
 
 .presentation {
-  position: relative;
   width: 100%;
-  height: 80vh;         /* altura fija relativa al viewport */
+  height: 80vh;        /* altura fija proporcional al viewport */
   overflow: hidden;
-  margin-top: 0;        /* no usamos margin, el nav ya está sobre relative */
+  position: relative;
+  margin-top: var(--nav-h); /* nav arriba, no tapa */
 }
-
 
 .presentation video {
   position: absolute;
-  top: 0;
+  top: 50%;
   left: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  transform: translateX(-50%);
-  object-fit: cover;    /* recorta los lados si hace falta */
+  width: 100%;         /* siempre ancho completo */
+  height: auto;        /* mantiene proporción */
+  min-height: 100%;    /* ocupa toda la sección vertical */
+  object-fit: cover;   /* recorta los lados si es necesario */
+  transform: translate(-50%, -50%); /* centra el video */
 }
 
 /* MEDIA QUERIES - responsive */

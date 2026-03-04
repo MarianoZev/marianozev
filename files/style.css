@@ -109,7 +109,7 @@ h2,h3,h4,h5,h6 { font-size: clamp(14px, 2vw, 20px); color: rgb(237, 14, 14); pad
   left: 50%;
   min-width: 100%;    /* cubre todo el ancho de la sección */
   min-height: 100%;   /* cubre toda la altura de la sección */
-  object-fit: cover;  
+  object-fit: contain;  
   transform: translate(-50%, -50%); /* centra el video */
 }
 

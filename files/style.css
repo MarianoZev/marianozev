@@ -1,6 +1,6 @@
 /*------NAV------*/
 :root {
-  --nav-h: 120px; /* más alto */
+  --nav-h: 600px; /* más alto */
 }
 
 /* RESET */
@@ -484,6 +484,24 @@ h2,h3,h4,h5,h6 { font-size: clamp(14px, 2vw, 20px); color: rgb(237, 14, 14); pad
     grid-template-columns: 1fr;
   }
 }
+
+:root {
+  --nav-h: 60px; /* default narrow */
+}
+
+@media (min-width: 1200px) {
+  :root {
+    --nav-h: 90px; /* nav más alto en pantallas grandes */
+  }
+}
+
+nav {
+  height: var(--nav-h);
+  /* resto de estilos */
+}
+
+
+
 @media (max-width: 768px) {
   nav {
   height: var(--nav-h);

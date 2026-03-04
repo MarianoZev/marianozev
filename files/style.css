@@ -97,21 +97,20 @@ h2,h3,h4,h5,h6 { font-size: clamp(14px, 2vw, 20px); color: rgb(237, 14, 14); pad
 
 .presentation {
   width: 100%;
-  height: 80vh; /* ocupa 80% de la pantalla siempre */
-  max-height: 80vh;
+  height: 80vh;      /* ocupa 80% del viewport */
+  max-height: 80vh;  
   overflow: hidden;
-  position: relative;
+  position: relative; 
 }
 
 .presentation video {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 100vw;      /* siempre cubre el ancho de la ventana */
-  height: auto;      /* mantiene proporción */
-  min-height: 100%;  /* asegura que cubre la sección vertical */
-  object-fit: cover; 
-  transform: translate(-50%, -50%);
+  min-width: 100%;    /* cubre todo el ancho de la sección */
+  min-height: 100%;   /* cubre toda la altura de la sección */
+  object-fit: cover;  
+  transform: translate(-50%, -50%); /* centra el video */
 }
 
 

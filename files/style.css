@@ -90,19 +90,20 @@ h2,h3,h4,h5,h6 { font-size: clamp(14px, 2vw, 20px); color: rgb(237, 14, 14); pad
 /*------BODY------*/
 
 .presentation {
-  width: 100%;
-  aspect-ratio: 16 / 9; /* mantiene proporción */
-  height: 80vh;
-  margin-top: var(--nav-h); /* clave para que no quede debajo del nav */
+  position: relative;
+  width: 100vw;
+  height: 100vh;
   overflow: hidden;
-  display: flex;
 }
 
 .presentation video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  display: block;
+  transform: translate(-50%, -50%);
 }
 
 
@@ -526,30 +527,6 @@ nav {
     padding-top: 1.5rem;
   }
 }
-
-/* Tablet / media ancho */
-@media (max-width: 1200px) {
-  .presentation {
-    height: 60vh;
-  }
-}
-
-/* Mobile narrow */
-@media (max-width: 768px) {
-  .presentation {
-    height: 40vh;
-  }
-}
-
-@media (max-width: 768px) {
-  .presentation video {
-    object-fit: contain;
-    background: black; /* bandas si sobra espacio */
-  }
-}
-
-
-
 
 /*------click ripple------*/
 .click-ripple {

@@ -1,6 +1,11 @@
-/*------NAV------*/
 :root {
-  --nav-h: 60px; /* más alto */
+  --nav-h: 60px; /* altura nav narrow */
+}
+
+@media (min-width: 1200px) {
+  :root {
+    --nav-h: 90px; /* nav más alto en wide */
+  }
 }
 
 /* RESET */
@@ -16,81 +21,71 @@ html {
   overflow-x: hidden;
 }
 
-
 body {
-  overflow-x: hidden;
-  width: 100%;
-  min-height: 100vh;
-  margin: 0;
   font-family: 'Lato', sans-serif;
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 
-
 /* NAV */
 nav {
-  position: sticky;       /* se queda visible al hacer scroll */
-  top: 0;
+  position: relative; /* empuja la sección debajo */
   width: 100%;
   height: var(--nav-h);
   display: flex;
   align-items: center;
-  justify-content: center;
-
-  background-color: rgba(3, 114, 114, 0.65); 
-  backdrop-filter: blur(6px); 
+  justify-content: flex-start; /* nav links a la izquierda */
   padding: 0 2%;
+  background-color: rgba(3, 114, 114, 0.65);
+  backdrop-filter: blur(6px);
   z-index: 1000;
 }
 
-/* Nav links */
 .nav-links ul {
   display: flex;
-  gap: 1rem;
-  align-items: center;
-  justify-content: left;
   list-style: none;
+  gap: 1rem;
 }
 
 .nav-links ul li a {
   color: #fff;
   text-decoration: none;
-  font-size: clamp(16px, 2vw, 32px); 
+  font-size: clamp(16px, 2vw, 32px);
   transition: 0.3s ease;
 }
 
-.nav-links ul li::after {
-  content: '';
-  width: 0%;
-  height: 2px;
-  background: #012209;
-  display: block;
-  margin: auto;
-  transition: 0.5s;
-}
-
-.nav-links ul li:hover::after {
-  width: 100%;
-}
-
-/* PRESENTATION */
+/* HERO / PRESENTATION */
 .presentation {
-  width: 100vw;
-  height: 100vh; /* siempre full screen */
+  width: 100%;
+  height: 100vh; /* ocupa toda la ventana */
   position: relative;
   overflow: hidden;
 }
 
 .presentation video {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 100vw;
-  height: 100vh;
-  object-fit: cover;
-  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* siempre cubre, recorta si es necesario */
+  display: block;
+}
+
+/* MEDIA QUERIES - responsive */
+@media (max-width: 768px) {
+  nav {
+    height: 60px;
+  }
+  
+  .nav-links ul li a {
+    font-size: 0.9rem;
+  }
+
+  .presentation {
+    height: 60vh; /* hero más pequeño en móvil */
+  }
 }
 
 

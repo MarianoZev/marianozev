@@ -92,7 +92,8 @@ h2,h3,h4,h5,h6 { font-size: clamp(14px, 2vw, 20px); color: rgb(237, 14, 14); pad
 .presentation {
   position: relative;
   width: 100%;
-  max-height: 80vh;   /* no crece más de 80% de la pantalla */
+  height: 80vh;      /* fijo en 80% del viewport */
+  max-height: 600px; /* opcional, no deja crecer demasiado en pantallas grandes */
   overflow: hidden;
 }
 
@@ -100,8 +101,9 @@ h2,h3,h4,h5,h6 { font-size: clamp(14px, 2vw, 20px); color: rgb(237, 14, 14); pad
   position: absolute;
   top: 50%;
   left: 50%;
-  min-width: 100%;    /* siempre cubre el ancho */
-  min-height: 100%;   /* siempre cubre la altura mínima */
+  width: auto;       /* ancho automático */
+  height: 100%;      /* siempre cubre la altura de la sección */
+  min-width: 100%;   /* asegura que nunca queden huecos horizontales */
   object-fit: cover;
   transform: translate(-50%, -50%);
 }

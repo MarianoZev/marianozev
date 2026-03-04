@@ -32,7 +32,7 @@ body {
 
 /* NAV */
 nav {
-  position: sticky;   /* ya no fixed */
+  position: fixed;   /* ya no fixed */
   top: 0;
   width: 100%;
   height: var(--nav-h);

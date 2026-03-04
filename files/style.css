@@ -520,21 +520,9 @@ body, html {
 @media (max-width: 768px) {
   .presentation {
     height: auto;
-    aspect-ratio: 16 / 9;   /* mantiene proporción */
-  }
-  .presentation video {
-    position: relative;
-    object-fit: contain;
-    background: black;     /* bandas elegantes */
-  }
-}
-@media (max-width: 1200px) {
-  .presentation {
-    height: 100%;
     aspect-ratio: 16 / 9;
   }
-}
-@media (max-width: 768px) {
+
   .presentation video {
     object-fit: contain;
     background: black;

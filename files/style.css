@@ -15,13 +15,20 @@ html {
   overflow-x: hidden;
 }
 
+
 body {
-  padding-top: var(--nav-h);
+  padding-top: var(--nav-h);  /* compensa el nav fixed */
   overflow-x: hidden;
   width: 100%;
   min-height: 100vh;
+  margin: 0;
   font-family: 'Lato', sans-serif;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
+
+
 
 /* NAV */
 nav {
@@ -105,22 +112,7 @@ html {
   object-fit: cover;
   display: block;
 }
-body {
-  overflow-x: hidden;
-  max-width: 100%;
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  min-height: 100vh;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-/*------SECCIONES------*/
-body, html {
-  margin: 0;
-  padding: 0;
-}
+
 * {
   margin: 0;
   padding: 0;

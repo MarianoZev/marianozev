@@ -29,45 +29,35 @@ body {
 }
 
 
-
 /* NAV */
-
 nav {
-  position: relative;  /* empuja el contenido debajo del nav */
+  position: sticky;       /* se queda visible al hacer scroll */
+  top: 0;
   width: 100%;
-  height: var(--nav-h);  /* altura definida en :root, 60px narrow / 90px wide */
+  height: var(--nav-h);
   display: flex;
   align-items: center;
   justify-content: center;
 
-  background-color: rgba(3, 114, 114, 0.65); /* más transparente */
+  background-color: rgba(3, 114, 114, 0.65); 
   backdrop-filter: blur(6px); 
   padding: 0 2%;
-  z-index: 1000; /* por si quieres que siempre esté arriba visualmente */
+  z-index: 1000;
 }
 
-
-
-
-
-
-
-.nav-links {
-  flex: 1;
-}
-
+/* Nav links */
 .nav-links ul {
   display: flex;
+  gap: 1rem;
   align-items: center;
   justify-content: left;
   list-style: none;
-  gap: 1rem;
 }
 
 .nav-links ul li a {
   color: #fff;
   text-decoration: none;
-  font-size: clamp(16px, 2vw, 32px);
+  font-size: clamp(16px, 2vw, 32px); 
   transition: 0.3s ease;
 }
 
@@ -84,6 +74,27 @@ nav {
 .nav-links ul li:hover::after {
   width: 100%;
 }
+
+/* PRESENTATION */
+.presentation {
+  width: 100%;
+  height: 80vh;       /* sección hero ocupa 80% del viewport */
+  max-height: 80vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.presentation video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;       /* cubre ancho */
+  height: 100%;      /* cubre alto de la sección */
+  object-fit: cover;  /* mantiene proporción y cubre la sección */
+  transform: translate(-50%, -50%);
+}
+
+
 /*------HEADINGS------*/
 h1, h2, h3, h4, h5, h6{
   text-align: center;
@@ -97,7 +108,7 @@ h2,h3,h4,h5,h6 { font-size: clamp(14px, 2vw, 20px); color: rgb(237, 14, 14); pad
 
 .presentation {
   width: 100%;
-  height: 80vh;      /* ocupa 80% del viewport */
+  height: 80vh;      
   max-height: 80vh;  
   overflow: hidden;
   position: relative; 
@@ -107,10 +118,10 @@ h2,h3,h4,h5,h6 { font-size: clamp(14px, 2vw, 20px); color: rgb(237, 14, 14); pad
   position: absolute;
   top: 50%;
   left: 50%;
-  min-width: 100%;    /* cubre todo el ancho de la sección */
-  min-height: 100%;   /* cubre toda la altura de la sección */
+  min-width: 100%;   
+  min-height: 100%;  
   object-fit: contain;  
-  transform: translate(-50%, -50%); /* centra el video */
+  transform: translate(-50%, -50%); 
 }
 
 

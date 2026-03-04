@@ -103,25 +103,6 @@ body {
   background-size: cover;
   background-position: center;
 }
-.presentation {
-  position: relative;
-  width: 100%;
-  height: 80vh;
-  overflow: hidden;
-  padding-top: var(--nav-h);
-  min-height: clamp(280px, 50vw, 80vh);
-  display: flex;
-}
-
-.presentation video {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-
-
-}
 /*------SECCIONES------*/
 body, html {
   margin: 0;

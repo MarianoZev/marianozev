@@ -31,21 +31,21 @@ body {
 
 
 /* NAV */
+
 nav {
-  position: fixed;   /* ya no fixed */
+  position: fixed;
   top: 0;
   width: 100%;
   height: var(--nav-h);
   z-index: 1000;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
-  background-color: rgba(3, 114, 114, 0.65); /* más transparente */
-  backdrop-filter: blur(6px); /* efecto elegante opcional */
+  background-color: rgba(3,114,114,0.65);
+  backdrop-filter: blur(6px);
   padding: 0 2%;
 }
+
 .nav-links {
   flex: 1;
 }
@@ -92,7 +92,9 @@ h2,h3,h4,h5,h6 { font-size: clamp(14px, 2vw, 20px); color: rgb(237, 14, 14); pad
 .presentation {
   width: 100%;
   height: 80vh;
+  margin-top: var(--nav-h); /* clave para que no quede debajo del nav */
   overflow: hidden;
+  display: flex;
 }
 
 .presentation video {

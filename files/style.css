@@ -18,7 +18,6 @@ html {
 
 
 body {
-  padding-top: var(--nav-h);  /* compensa el nav fixed */
   overflow-x: hidden;
   width: 100%;
   min-height: 100vh;

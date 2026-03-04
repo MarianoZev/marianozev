@@ -1,101 +1,59 @@
+/*------NAV------*/
 :root {
-  --nav-h: 60px; /* altura nav narrow */
+  --nav-h: 60px;
 }
-
-@media (min-width: 1200px) {
-  :root {
-    --nav-h: 90px; /* nav más alto en wide */
-  }
-}
-
-/* RESET */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-  height: 100%;
-  overflow-x: hidden;
-}
-
-body {
-  font-family: 'Lato', sans-serif;
-  min-height: 100vh;
-  width: 100%;
-  overflow-x: hidden;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-
-/* NAV */
 nav {
-  position: relative; /* empuja la sección debajo */
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   height: var(--nav-h);
+  z-index: 1000;
   display: flex;
   align-items: center;
-  justify-content: flex-start; /* nav links a la izquierda */
-  padding: 0 2%;
-  background-color: rgba(3, 114, 114, 0.65);
-  backdrop-filter: blur(6px);
-  z-index: 1000;
+  justify-content: center;
+  background-color: rgb(234, 211, 7);
+  padding: 0 2%
 }
-
-
+.nav-links {
+  flex: 1;
+}
+nav a {
+  white-space: normal;
+}
 .nav-links ul {
   display: flex;
-  list-style: none;
+  flex-wrap: nowrap;     /* desktop */
+  align-items: center;
+  justify-content: left;
+  padding: 0;
+  margin: 0;
   gap: 1rem;
 }
-
+.nav-links ul li {
+  list-style: none;
+  display: inline-block;
+  position: relative;
+  
+}
 .nav-links ul li a {
   color: #fff;
   text-decoration: none;
   font-size: clamp(16px, 2vw, 32px);
-  transition: 0.3s ease;
+  font-family: 'Lato', sans-serif;
 }
-
-/* HERO / PRESENTATION */
-
-.presentation {
+.nav-links ul li::after {
+  content: '';
+  width: 0%;
+  height: 2px;
+  background: #012209;
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+}
+.nav-links ul li:hover::after {
   width: 100%;
-  height: 80vh;        /* altura fija proporcional al viewport */
-  overflow: hidden;
-  position: relative;
-  margin-top: var(--nav-h); /* nav arriba, no tapa */
 }
-
-.presentation video {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 100%;         /* siempre ancho completo */
-  height: auto;        /* mantiene proporción */
-  min-height: 100%;    /* ocupa toda la sección vertical */
-  object-fit: cover;   /* recorta los lados si es necesario */
-  transform: translate(-50%, -50%); /* centra el video */
-}
-
-/* MEDIA QUERIES - responsive */
-@media (max-width: 768px) {
-  nav {
-    height: 60px;
-  }
-  
-  .nav-links ul li a {
-    font-size: 0.9rem;
-  }
-
-  .presentation {
-    height: 60vh; /* hero más pequeño en móvil */
-  }
-}
-
-
 /*------HEADINGS------*/
 h1, h2, h3, h4, h5, h6{
   text-align: center;
@@ -106,47 +64,83 @@ h1, h2, h3, h4, h5, h6{
 h1 { font-size: clamp(40px, 10vw, 60px); color: #47020296; }
 h2,h3,h4,h5,h6 { font-size: clamp(14px, 2vw, 20px); color: rgb(237, 14, 14); padding: 1em; }
 /*------BODY------*/
-
-.presentation {
+html {
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+    overflow-x: hidden;
+  max-width: 100%;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+    overflow-x: hidden;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
   width: 100%;
-  height: 80vh;      
-  max-height: 80vh;  
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.presentation {
+  position: relative;
+  width: 100%;
+  height: 80vh;
   overflow: hidden;
-  position: relative; 
+  padding-top: var(--nav-h);
+  min-height: clamp(280px, 50vw, 80vh);
+  display: flex;
 }
 
 .presentation video {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  min-width: 100%;   
-  min-height: 100%;  
-  object-fit: contain;  
-  transform: translate(-50%, -50%); 
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+
 }
-
-
-#yo {
+/*------SECCIONES------*/
+body, html {
+  margin: 0;
+  padding: 0;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.Acerca-de-mí{
+  font-size: clamp(26px, 26px, 20px);
   color: rgb(237, 14, 14);
   text-align: center;
   margin: 0 auto;
-  padding: 10em 5%;
+  padding: 2em 5%;
   background-image: url(../images/beige-back.jpg);
   background-size: cover;
   background-position: center;
 }
-
-#yo h2 {
-  font-size: clamp(24px, 3vw, 32px);
+.Acerca-de-mí h2{
+  font-size: 30px;
+  ;
 }
-
-#yo p {
- margin: 0 auto 1rem auto;
-  max-width: 800px;
-  font-size: 40px;
-  line-height: 1.6;
+.Acerca-de-mí P{
+  margin-bottom: 0.5rem;
+  font-size: clamp(0.9rem, 2.2vw, 1.3rem);
+  text-align: center;
 }
-
+.about-item {
+  width: 100%;
+  height: 100%;
+  flex: 1 1 45%; /* 2x2 */
+  display: flex;
+  justify-content: center;
+}
 .about-circle {
   aspect-ratio: 1 / 1;        /* mantiene círculo */
   width: 100%;
@@ -178,8 +172,8 @@ h2,h3,h4,h5,h6 { font-size: clamp(14px, 2vw, 20px); color: rgb(237, 14, 14); pad
 }
 .about-grid {
   display: grid;
-    grid-template-columns: repeat(4, 1fr);
-  gap: 2rem;
+  grid-template-columns: repeat(2, 1fr); /* 2x2 desktop */
+  gap: 3rem;
   max-width: 1100px;
   width: 100%;
 }
@@ -252,7 +246,7 @@ h2,h3,h4,h5,h6 { font-size: clamp(14px, 2vw, 20px); color: rgb(237, 14, 14); pad
   text-decoration: none;
   font-weight: bold;
 }
-.porta {
+.experiencia {
   text-align: center;
   width: 100%;
   padding: 3em 2%;
@@ -497,35 +491,10 @@ h2,h3,h4,h5,h6 { font-size: clamp(14px, 2vw, 20px); color: rgb(237, 14, 14); pad
     grid-template-columns: 1fr;
   }
 }
-@media (max-width: 1024px) {
-  .about-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media (max-width: 600px) {
-  .about-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-
-
-@media (min-width: 1200px) {
-  :root {
-    --nav-h: 90px; /* nav más alto en pantallas grandes */
-  }
-}
-
-nav {
-  height: var(--nav-h);
-  /* resto de estilos */
-}
-
-
-
 @media (max-width: 768px) {
   nav {
-  height: var(--nav-h);
+    height: 72px; /* solo un poco más alto */
+        position: fixed;
   }
 
   .nav-links ul {
@@ -544,6 +513,29 @@ nav {
   .Formación,
   .experiencia {
     padding-top: 1.5rem;
+  }
+}
+@media (max-width: 768px) {
+  .presentation {
+    height: auto;
+    aspect-ratio: 16 / 9;   /* mantiene proporción */
+  }
+  .presentation video {
+    position: relative;
+    object-fit: contain;
+    background: black;     /* bandas elegantes */
+  }
+}
+@media (max-width: 1200px) {
+  .presentation {
+    height: 100%;
+    aspect-ratio: 16 / 9;
+  }
+}
+@media (max-width: 768px) {
+  .presentation video {
+    object-fit: contain;
+    background: black;
   }
 }
 
@@ -594,9 +586,3 @@ nav.scrolled {
   background: rgba(255,255,255,0.08);
   transform: translateY(-6px);
 }
-
-
-
-
-
-

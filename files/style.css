@@ -593,3 +593,18 @@ nav.scrolled {
   background: rgba(255,255,255,0.08);
   transform: translateY(-6px);
 }
+
+
+
+
+
+
+@media (max-width: 768px) {
+  .presentation {
+    height: 60vh;    /* más pequeña en mobile */
+  }
+
+  .nav-links ul li a {
+    font-size: 0.9rem; 
+  }
+}

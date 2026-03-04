@@ -91,6 +91,7 @@ h2,h3,h4,h5,h6 { font-size: clamp(14px, 2vw, 20px); color: rgb(237, 14, 14); pad
 
 .presentation {
   width: 100%;
+  aspect-ratio: 16 / 9; /* mantiene proporción */
   height: 80vh;
   margin-top: var(--nav-h); /* clave para que no quede debajo del nav */
   overflow: hidden;
@@ -525,17 +526,30 @@ nav {
     padding-top: 1.5rem;
   }
 }
-@media (max-width: 768px) {
-  .presentation {
-    height: auto;
-    aspect-ratio: 16 / 9;
-  }
 
-  .presentation video {
-    object-fit: contain;
-    background: black;
+/* Tablet / media ancho */
+@media (max-width: 1200px) {
+  .presentation {
+    height: 60vh;
   }
 }
+
+/* Mobile narrow */
+@media (max-width: 768px) {
+  .presentation {
+    height: 40vh;
+  }
+}
+
+@media (max-width: 768px) {
+  .presentation video {
+    object-fit: contain;
+    background: black; /* bandas si sobra espacio */
+  }
+}
+
+
+
 
 /*------click ripple------*/
 .click-ripple {

@@ -43,3 +43,19 @@ const observer = new IntersectionObserver(entries => {
 });
 
 document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
+/---cv---/
+const cvBtn = document.querySelector('.cv-btn');
+cvBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+  const doc = cvBtn.dataset.doc;
+  const modal = document.querySelector('.doc-overlay');
+  const iframe = modal.querySelector('iframe');
+  iframe.src = doc;
+  modal.style.display = 'flex';
+});
+
+document.querySelector('.close-doc').addEventListener('click', () => {
+  const modal = document.querySelector('.doc-overlay');
+  modal.style.display = 'none';
+  modal.querySelector('iframe').src = '';
+}); 

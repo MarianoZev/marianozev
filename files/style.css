@@ -1,7 +1,12 @@
 :root {
   --nav-h: 80px;
 }
-
+section {
+  scroll-margin-top: var(--nav-h);
+}
+html {
+  scroll-behavior: smooth;
+}
 
 nav {
   position: fixed;

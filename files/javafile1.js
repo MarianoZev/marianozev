@@ -59,3 +59,5 @@ document.querySelector('.close-doc').addEventListener('click', () => {
   modal.style.display = 'none';
   modal.querySelector('iframe').src = '';
 }); 
+
+/----Video controls-----/

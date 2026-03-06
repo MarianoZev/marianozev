@@ -12,6 +12,9 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet"> 
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 </head>
 
 <body>
@@ -24,15 +27,15 @@
 <ul>
 <li><a href="#top">Home</a></li>
 <li><a href="#yo">About me</a></li>
-<li><a href="#de">Degrees</a></li>
+<li><a href="#de">Education</a></li>
 <li><a href="#porta">Portfolio</a></li>
 <li><a href="#contacto">Contact</a></li>
 </ul>
 </div>
 
-<a href="#" class="cv-btn" data-doc="files/Curriculum.pdf">
-<img src="images/curri.png" alt="CV">
-<div class="layer">CV</div>
+<a href="files/Curriculum.pdf" target="_blank" class="cv-download">
+<span class="cv-icon">⬇</span>
+<span class="cv-text">Download CV</span>
 </a>
 
 </nav>
@@ -42,7 +45,7 @@
 <!-------main------->
 
  <video muted autoplay loop controls width="100%" height="100%">
-    <source src="./images/Timeline 1.mp4" type="video/mp4" />
+    <source src="./images/Timeline1.mp4" type="video/mp4" />
   </video>
 
 <div class="X"></div>
@@ -112,21 +115,21 @@ herramientas que me permiten diseñar experiencias audiovisuales que combinan na
 
 <div class="row-2">
 
-<div class="campus1" data-doc="files/titulo.pdf">
+<div class="campus1">
 <img src="images/toulouse.jpg" class="image">
 <div class="layer">
 <h2>Licenciado en Comunicación Audiovisual Multimedia</h2>
 </div>
 </div>
 
-<div class="campus2" data-doc="files/ingles.pdf">
+<div class="campus2" >
 <img src="images/britanico.png" class="image">
 <div class="layer">
 <h2>Inglés Avanzado</h2>
 </div>
 </div>
 
-<div class="campus3" data-doc="files/frances.pdf">
+<div class="campus3">
 <img src="images/ILFI.png" class="image">
 <div class="layer">
 <h2>Francés Avanzado</h2>
@@ -237,50 +240,43 @@ herramientas que me permiten diseñar experiencias audiovisuales que combinan na
 
 <section id="contacto" class="contacto">
 
-<div class="bottom">
+<h1>Contáctame</h1>
 
-<h1>Contacto</h1>
+<div class="social-footer">
 
-<div class="row-4">
-
-<a href="https://wa.me/51960255843" target="_blank" class="bottominfo">
-<h2>WhatsApp</h2>
-<p>+51 960 255 843</p>
+<a href="https://wa.me/51960255843" target="_blank" class="social-btn whatsapp">
+<i class="fa-brands fa-whatsapp"></i>
 </a>
 
-<a href="mailto:mzm1992@hotmail.com" class="bottominfo">
-<h2>Email</h2>
-<p>mzm1992@hotmail.com</p>
+<a href="mailto:mzm1992@hotmail.com" class="social-btn email">
+<i class="fa-solid fa-envelope"></i>
 </a>
 
-<a href="https://www.linkedin.com/in/mariano-javier-zevallos-matos-6956a0a5/" target="_blank" class="bottominfo">
-<h2>LinkedIn</h2>
-<p>/in/mariano-javier-zevallos-matos</p>
+<a href="https://www.linkedin.com/in/mariano-javier-zevallos-matos-6956a0a5/" target="_blank" class="social-btn linkedin">
+<i class="fa-brands fa-linkedin"></i>
 </a>
 
-<a href="https://www.youtube.com/@marianozevallos2931" target="_blank" class="bottominfo">
-<h2>YouTube</h2>
-<p>@marianozevallos2931</p>
+<a href="https://www.youtube.com/@marianozevallos2931" target="_blank" class="social-btn youtube">
+<i class="fa-brands fa-youtube"></i>
 </a>
 
-<a href="https://instagram.com/marianozev" target="_blank" class="bottominfo">
-<h2>Instagram</h2>
-<p>@marianozev</p>
+<a href="https://instagram.com/marianozev" target="_blank" class="social-btn instagram">
+<i class="fa-brands fa-instagram"></i>
 </a>
 
 </div>
 
-<div class="TBL">
-<p>© 2026</p>
-</div>
-
-</div>
+<footer class="site-footer">
+<p>© 2026 - Mariano Zevallos <br> <br>   Portfolio  </p>
+</footer>
 
 </section>
 
-<footer></footer>
 
 </body>
+
+
+
 <script>
 window.addEventListener("scroll", function () {
   const nav = document.querySelector("nav");

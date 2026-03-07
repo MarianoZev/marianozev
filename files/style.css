@@ -80,40 +80,48 @@ nav a {
 .cv-download{
 display:inline-flex;
 align-items:center;
-gap:10px;
+gap:12px;
 
-padding:12px 24px;
-
-background:#22c55e;
-color:white;
+padding:14px 26px;
 
 font-size:16px;
 font-weight:600;
 
+color:white;
 text-decoration:none;
-border-radius:8px;
 
-transition:all .3s ease;
+border-radius:10px;
+
+background:linear-gradient(
+  270deg,
+  #22c55e,
+  #4ade80,
+  #16a34a
+);
+
+background-size:300% 300%;
+animation:cvGradient 6s ease infinite;
+
+transition:all .35s ease;
 }
 
-/* animación flecha */
+/* animación gradiente */
+
+@keyframes cvGradient{
+
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+
+}
+
+/* flecha */
 
 .cv-icon{
-display:inline-block;
-transition:transform .3s ease;
+font-size:18px;
+animation:arrowBounce 1.6s infinite;
 }
 
-.cv-download:hover .cv-icon{
-transform:translateY(4px);
-}
-
-/* hover botón */
-
-.cv-download:hover{
-background:#16a34a;
-transform:scale(1.05);
-box-shadow:0 8px 20px rgba(0,0,0,.3);
-}
 
 
 /*------HEADINGS------*/
@@ -693,34 +701,35 @@ display: flex;
     font-size: 0.9rem;
   }
 }
-@media (max-width: 768px) {
-  .row-4 {
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
-  }
 
-  .row-4 .bottominfo {
-    flex: 0 0 90%;  /* casi todo el ancho del móvil */
-    max-width: 100%;
-    font-size: 20px;
-  }
+
+.cv-icon{
+font-size:18px;
+animation:arrowBounce 1.6s infinite;
 }
 
-@media (max-width: 1024px) {
-  .row-4 {
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
-  }
+/* rebote flecha */
 
-  .row-4 .bottominfo {
-    flex: 0 0 90%;  /* casi todo el ancho del móvil */
-    max-width: 100%;
-    font-size: 30px;
-  }
+@keyframes arrowBounce{
+
+0%,100%{transform:translateY(0);}
+50%{transform:translateY(6px);}
+
 }
 
+/* hover */
+
+.cv-download:hover{
+
+transform:translateY(-3px) scale(1.05);
+
+box-shadow:
+0 10px 30px rgba(0,0,0,.3),
+0 0 20px rgba(34,197,94,.6);
+
+}
+
+/* MOBILE */
 
 @media (max-width:768px){
 
@@ -729,7 +738,8 @@ display:none;
 }
 
 .cv-download{
-font-size:20px;
+
+font-size:22px;
 }
 
 }

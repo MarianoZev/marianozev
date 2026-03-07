@@ -30,7 +30,7 @@ nav a {
   white-space: normal;
 }
 .nav-links ul li a {
-  color: #fff;
+  color: #f4f1eb;
   text-decoration: none;
   font-size: clamp(30px, 2vw, 40px);
   font-family: 'Lato', sans-serif;
@@ -39,27 +39,42 @@ nav a {
   transition: transform 0.3s ease; /* zoom */
 }
 
+.nav-links ul li a::after {
+  content:"";
+  position:absolute;
+  inset:0;
+  background:#e3b602;
+  border-radius:8px;
+
+  transform:scale(0);
+  transform-origin:center;
+  transition:transform .3s ease;
+
+  z-index:-1;
+}
+
+.nav-links ul li a:hover::after {
+transform:scale(1);
+}
+
+
+nav ul li a.active::after{
+  transform:scale(1);
+}
+
+
 /* Zoom al hover */
 .nav-links ul li a:hover {
   transform: scale(1.1); /* aumenta 10% */
 }
 
 /* Línea debajo del texto dentro del link */
-.nav-links ul li a::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: -5px;            /* ajustá según quieras */
-  width: 0%;
-  height: 2px;
-  background: #e9ecea;
-  transition: width 0.3s ease;
-}
+
 
 /* Línea completa al hover */
-.nav-links ul li a:hover::after {
-  width: 100%;
-}
+
+
+
 
 /* Layout nav */
 .nav-links ul {
@@ -237,7 +252,7 @@ body {
   min-height: 200px; /* límite para que no se deformen */
   aspect-ratio: 1 / 1; /* mantiene círculo perfecto */
   border-radius: 50%;
-  background: rgba(8, 129, 189, 0.536);
+  background: rgb(230, 160, 8);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -275,7 +290,7 @@ body {
 .about-circle:hover {
   box-shadow:
     0 0 0 4px rgba(255, 255, 255, 0.08),
-    0 20px 60px rgba(207, 102, 102, 0.823);
+    0 20px 60px rgba(219, 213, 213, 0.823);
   transform: scale(1.04);
 }
 
@@ -738,7 +753,7 @@ display:none;
 }
 
 .cv-download{
-
+padding:14px;
 font-size:22px;
 }
 

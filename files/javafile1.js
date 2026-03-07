@@ -26,12 +26,7 @@ document.addEventListener("click", e => {
 
   setTimeout(() => ripple.remove(), 600);
 });
-/----constant nav----/
-const nav = document.querySelector("nav");
 
-window.addEventListener("scroll", () => {
-  nav.classList.toggle("scrolled", window.scrollY > 50);
-});
 /----reveal----/
 
 const observer = new IntersectionObserver(entries => {
@@ -61,3 +56,93 @@ document.querySelector('.close-doc').addEventListener('click', () => {
 }); 
 
 /----Video controls-----/
+
+const links = document.querySelectorAll(".nav-links a");
+
+links.forEach(link => {
+
+link.addEventListener("click", function(){
+
+links.forEach(l => l.classList.remove("active"));
+
+this.classList.add("active");
+
+});
+
+});
+
+/*nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--nav-h);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 2%;}
+nav.scrolled {
+  background: rgba(0, 0, 0, 0.6); 
+  backdrop-filter: blur(6px);     
+}
+.nav-links {
+  flex: 1;
+}
+nav a {
+  white-space: normal;
+}
+.nav-links ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: clamp(30px, 2vw, 40px);
+  font-family: 'Lato', sans-serif;
+  position: relative;       
+  display: inline-block;
+  transition: transform 0.3s ease; 
+}
+
+
+.nav-links ul li a:hover {
+  transform: scale(1.1); 
+}
+
+
+.nav-links ul li a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;            
+  width: 0%;
+  height: 2px;
+  background: #e9ecea;
+  transition: width 0.3s ease;
+}
+
+
+.nav-links ul li a:hover::after {
+  width: 100%;
+}
+
+
+.nav-links ul {
+  display: flex;
+  flex-wrap: nowrap;    
+  align-items: center;
+  justify-content: left;
+  padding: 0;
+  margin: 0;
+  gap: 1rem;
+}
+
+.nav-links ul li {
+  list-style: none;
+}
+/----constant nav----/
+const nav = document.querySelector("nav");
+
+window.addEventListener("scroll", () => {
+  nav.classList.toggle("scrolled", window.scrollY > 50);
+});
+
+*/

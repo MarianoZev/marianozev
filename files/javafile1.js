@@ -70,6 +70,8 @@ this.classList.add("active");
 });
 
 });
+/-blur between sections-/
+
 
 /*nav {
   position: fixed;

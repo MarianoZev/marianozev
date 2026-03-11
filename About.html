@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<link rel="stylesheet" href="files/style.css">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mariano Zevallos Matos</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet"> 
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-------nav------->
+
+<nav>
+
+<div class="nav-links">
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="About.html">About me</a></li>
+<li><a href="Education.html">Education</a></li>
+<li><a href="Portfolio.html">Portfolio</a></li>
+<li><a href="Contact.html">Contact</a></li>
+</ul>
+</div>
+
+<a href="files/Curriculum.pdf" target="_blank" class="cv-download">
+  <span class="cv-icon">↓</span>
+  <span class="cv-text">Download CV</span>
+</a>
+
+</nav>
+
+
+<!-------Acerca de mi------->
+<section id="Me" class="me">
+
+<section class="Description">
+
+<div class="hero-back">
+<h1><span class="Mariano">Mariano Zevallos</span></h1>
+<p>Productor técnico audiovisual</p>
+</div>
+
+</section>
+<div class="about-text">
+<p>
+Licenciado en <span class="frase1">COMUNICACIÓN AUDIOVISUAL MULTIMEDIA</span> 
+con más de diez años de experiencia laboral continua en sectores estratégicos como atención al
+cliente, ventas y soporte técnico. Esta trayectoria me permitió fortalecer mis habilidades 
+profesionales y autofinanciar mis estudios en idiomas y en mi carrera. Desde 2022, me dedico 
+plenamente a mi desarrollo profesional en el ámbito audiovisual y digital.
+<br><br>
+Como profesional en comunicación audiovisual de <span class="frase1">TOULOUSE LAUTREC,</span>  fui formado transversalmente 
+en el proceso de producción audiovisual, animación y programación, herramientas que me permiten 
+diseñar experiencias audiovisuales que combinan narrativa, 3D e integración tecnológica.
+</p>
+
+
+</div>
+
+
+
+<div class="skills-title">
+  <h1 class="section-title">MIS HABILIDADES</h1>
+</div>
+
+<section class="about">
+    
+
+
+<div class="about-grid">
+
+<div class="about-item">
+<div class="about-circle">
+<h3>PRODUCCIÓN AUDIOVISUAL</h3>
+<p>ART DIRECTION<br>&<br>PHOTOGRAPHY</p>
+</div>
+</div>
+
+<div class="about-item">
+<div class="about-circle">
+<h3>ANIMACIÓN</h3>
+<p>MOTION GRAPHICS<br>&<br>POSTPRODUCTION</p>
+</div>
+</div>
+
+<div class="about-item">
+<div class="about-circle">
+<h3>PROGRAMACIÓN</h3>
+<p>WEB DESIGN<br>&<br>INTERACTIVE MEDIA</p>
+</div>
+</div>
+
+<div class="about-item">
+<div class="about-circle">
+<h3>LENGUAS EXTRANJERAS</h3>
+<p>FRANÇAIS<br>&<br>ENGLISH</p>
+</div>
+</div>
+
+</div>
+
+</section>
+
+</section>
+
+
+<!-------modal------->
+
+<div id="docModal" class="modal">
+<span class="close">&times;</span>
+<iframe id="docFrame"></iframe>
+<a id="downloadBtn" download>Descargar PDF</a>
+</div>
+
+<script src="files/javafile1.js"></script>
+
+</section>
+
+
+<script>
+window.addEventListener("scroll", function () {
+  const nav = document.querySelector("nav");
+
+  if (window.scrollY > 50) {
+    nav.classList.add("scrolled");
+  } else {
+    nav.classList.remove("scrolled");
+  }
+});
+</script>
+
+</body>
+</html>

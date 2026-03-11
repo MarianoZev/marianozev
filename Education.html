@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<link rel="stylesheet" href="files/style.css">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mariano Zevallos Matos</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet"> 
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-------nav------->
+
+<nav>
+
+<div class="nav-links">
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="About.html">About me</a></li>
+<li><a href="Education.html">Education</a></li>
+<li><a href="Portfolio.html">Portfolio</a></li>
+<li><a href="Contact.html">Contact</a></li>
+</ul>
+</div>
+
+<a href="files/Curriculum.pdf" target="_blank" class="cv-download">
+  <span class="cv-icon">↓</span>
+  <span class="cv-text">Download CV</span>
+</a>
+
+</nav>
+
+<!-------Education------->
+
+<section id="Education" class="studies">
+<h1 class="section-title">FORMACIÓN ACADÉMICA</h1>
+
+<div class="education-row"
+<div class="row-2">
+
+<div class="campus1">
+<img src="images/TLS.png" class="image">
+<div class="layer">
+      <h2>Licenciado en Comunicación Audiovisual Multimedia.</h2>
+    </div>
+</div>
+
+<div class="campus2">
+<img src="images/britanico.png" class="image">
+<div class="layer">
+      <h2>Dominio de inglés avanzado escrito y hablado</h2>
+    </div>
+</div>
+
+<div class="campus3">
+<img src="images/ILFI.png" class="image">
+<div class="layer">
+      <h2>Dominio de francés avanzado escrito y hablado</h2>
+    </div>
+</div>
+
+</div>
+</div>
+
+
+</section>
+
+
+<section id="Portfolio" class="exp">
+
+</section>
+
+
+<script>
+window.addEventListener("scroll", function () {
+  const nav = document.querySelector("nav");
+
+  if (window.scrollY > 50) {
+    nav.classList.add("scrolled");
+  } else {
+    nav.classList.remove("scrolled");
+  }
+});
+</script>
+
+</body>
+</html>

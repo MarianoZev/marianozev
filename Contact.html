@@ -113,22 +113,18 @@
 
 <div class="contact-right">
 
-<form class="contact-form">
+<form class="contact-form" action="https://formspree.io/f/xkoqjopn" method="POST">
 
 <h3>¿Tienes un proyecto?</h3>
 <p>Me encantaría escuchar tu idea. Escríbeme y conversemos.</p>
 
 <div class="form-row">
-<input type="text" name="nombre" placeholder="Nombre">
-<input type="text" name="apellido" placeholder="Apellido">
+<input type="text" name="nombre" placeholder="Name" required>
+<input type="text" name="apellido" placeholder="Last Name" required>
 </div>
 
 
-
-<input type="email" name="email" placeholder="Email">
-
-<textarea name="mensaje" placeholder="Mensaje"></textarea>
-
+<textarea name="mensaje" placeholder="Write something" required></textarea>
 <button type="submit">Enviar</button>
 
 <footer class="site-footer">

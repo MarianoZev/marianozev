@@ -27,7 +27,7 @@ nav {
 }
   
 nav.scrolled {
-  backdrop-filter: blur(20px);     /* opcional, efecto moderno */
+  backdrop-filter: blur(900px);     /* opcional, efecto moderno */
 }
 .nav-links {
 display:flex;
@@ -303,7 +303,7 @@ font-size: clamp(10px,4vw,16px);
   text-align:center;
   color:rgb(255, 255, 255);
   display:inline-block;   /* clave */
-  font-size: clamp(35px,2vw,38px);
+  font-size: clamp(20px,2vw,28px);
   margin-bottom:0.5em;
 
 
@@ -667,7 +667,7 @@ opacity:1;
 
 
 .education-section{
-width:min(92%,900px);
+width:min(92%,800px);
 height: auto;
 margin:80px auto;
 padding:40px;
@@ -704,7 +704,7 @@ opacity: .8;
 
 .row-text h2{
 width:100%;
-font-size:clamp(18px,2vw,22px);
+font-size:clamp(14px,2vw,16px);
 color:white;
 background:rgb(57,216,153);
 padding:12px;
@@ -785,8 +785,9 @@ rgba(2, 237, 49, 0.8)
 
   display: inline-block;        /* para poder hacer transform */
   margin: 0.5em 0;              /* separa los links */
-  font-size: clamp(16px, 2vw, 20px);
+  font-size: clamp(12px, 2vw, 16px);
   font-family: monospace;
+  font-weight: bold;
   color:rgb(237,14,14);                  /* color normal, no azul */
   text-decoration: none;
   transition: transform 1.2s ease, color 0.6s ease;
@@ -924,7 +925,7 @@ box-shadow:
   gap: 2%;
   margin: 2em auto;
   object-fit:cover;
-  width: 60%;
+  width: 40%;
   padding: 0 1em;
   gap: 2rem;
   justify-content: center;
@@ -991,8 +992,12 @@ width:min(92%,1000px);
 max-height:clamp(650px,25vw,700px);
 
 height: auto;
-background:#f5f5f5;
-
+background:linear-gradient(
+  270deg,
+  #e5e6c728,
+  #aea77c,
+  #e6e4769a
+);
 border-radius:10px;
 
 display:grid;
@@ -1066,7 +1071,7 @@ margin:0;
 text-align:left;
 color:white;
 font-weight:bold;
-font-size:clamp(12px,1vw,20px);
+font-size: clamp(16px,4vw,30px);
 white-space:nowrap;
 
 
@@ -1149,8 +1154,8 @@ font-weight: bold;
 .skill p{
   text-align: center;
 
-font-size:clamp(7px,1vw,10px);
-
+font-size:clamp(8px,1vw,14px);
+font-weight: bold;
 opacity:0.8;
 
 line-height:1.4;
@@ -1191,25 +1196,25 @@ justify-content:flex-start;
 
 align-items:center;
 gap:10px;
-top:clamp(25px,5vw, 400px);
+top:clamp(25px,5vw, 80px);
 position:relative;
 }
 
 .social-btn{
 
-width: (32px, 5vw, 42px);
-height:(32px, 5vw, 42px);
+
 
 border-radius:50%;
 
 display:flex;
 justify-content:center;
 align-items:center;
+font-size:clamp(16px,2vw,22px);
 
-font-size:(35px, 5vw, 50px);
-
-background:rgba(34,1,1,0.7);
-color:white;
+width:clamp(32px,5vw,42px);
+height:clamp(32px,5vw,42px);
+background:rgba(230, 147, 6, 0.881);
+color:rgb(57, 38, 8);
 
 transition:transform .6s ease, box-shadow .6s ease;
 
@@ -1220,8 +1225,8 @@ transition:transform .6s ease, box-shadow .6s ease;
 transform:scale(1.4);
 
 box-shadow:
-0 0 0 8px rgba(255,255,255,0.1),
-0 10px 30px rgba(0,0,0,0.25);
+0 0 0 8px rgba(216, 137, 137, 0.1),
+0 10px 30px rgba(37, 34, 34, 0.675);
 
 }
 
@@ -1323,6 +1328,7 @@ transition:0.3s;
 .contact-form button:hover{
 
 background:#eb9706;
+transform:scale(1.08);
 
 }
 

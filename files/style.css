@@ -1113,6 +1113,7 @@ align-self:flex-start;
 }
 
 .row-pro{
+  background-color: wheat;
 position: relative;
 top:clamp(-75px,5vw, -55px);
 display:grid;
@@ -1242,21 +1243,22 @@ align-items:center;
 }
 
 .contact-form{
+  background-color: white;
 
 display:flex;
 
 flex-direction:column;
 
 gap:clamp(12px,2vw,18px);
+width:clamp(380px,5vw, 500px);
 
-width:100%;
 
 }
 
 .form-row{
 position: relative;
-width:clamp(380px,5vw, 500px);
 display:grid;
+width:90%;
 
 grid-template-columns:1fr 1fr;
 

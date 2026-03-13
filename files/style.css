@@ -709,7 +709,7 @@ color:white;
 background:rgb(57,216,153);
 padding:12px;
 border-radius:8px;
-text-align:center;
+text-align:left;
 transition:.6s;
 
 }
@@ -994,9 +994,9 @@ max-height:clamp(650px,25vw,700px);
 height: auto;
 background:linear-gradient(
   270deg,
-  #e5e6c728,
-  #aea77c,
-  #e6e4769a
+  #dfc079b1,
+  #dad08fb5,
+  #e7e6bab4
 );
 border-radius:10px;
 
@@ -1116,9 +1116,9 @@ display:grid;
 
 grid-template-columns:repeat(3,1fr);
 
-gap:clamp(5px,2vw,18px);
+gap:clamp(5px,2vw,25px);
 
-width:80%;
+width:95%;
 
 margin-top:clamp(12px,2vw,20px);
 
@@ -1142,9 +1142,9 @@ gap:clamp(6px,1vw,10px);
 }
 
 .skill h3{
-  text-align: center;
+text-align: left;
 
-font-size:clamp(8px,1.2vw,12px);
+font-size:clamp(12px,1.2vw,14px);
 
 text-transform:uppercase;
 font-weight: bold;
@@ -1152,13 +1152,11 @@ font-weight: bold;
 }
 
 .skill p{
-  text-align: center;
-
-font-size:clamp(8px,1vw,14px);
+font-size:clamp(8px,1vw,12px);
 font-weight: bold;
 opacity:0.8;
-
 line-height:1.4;
+text-align: left;
 
 }
 
@@ -1340,6 +1338,7 @@ position: relative;
 margin-top:clamp(1px,3vw,5px);
 
 font-size:clamp(12px,0.9vw,14px);
+text-align: right;
 
 opacity:0.7;
 display:flex;

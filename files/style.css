@@ -751,14 +751,7 @@ rgba(2, 237, 49, 0.8)
 
 }
 
-@media (max-width: 768px) {
-  .education-section {
-    grid-template-columns: 1fr;
-  }
-   .row-images h2{
-      font-size:20px;
-    }
-}
+
 
 /*-------exp---------*/
 
@@ -780,43 +773,40 @@ rgba(2, 237, 49, 0.8)
 .genbox {
   position: relative;
   min-height: 100vh; 
-  width: min(90%, 1300px);  
+  width: min(92%, 1300px);  
   /* Quitamos min-height y quitamos background */
   display: grid;
-  grid-template-columns: 1fr 1fr; 
-  gap: 160px;
+  grid-template-columns: 1.4fr 1fr; 
+  gap: 10px;
   align-items: start; /* Alinea el contenido arriba */
 
 }
+
 .porta {
   position: relative;
   text-align: center;
   width: 100%;
   padding: 3em 2%;
- 
 }
 
-.previous-exp{
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centra todo el contenido de la columna */
-    text-align: center;
-    width: 100%;
-    position: relative;
-background:linear-gradient(
-  270deg,
-  #dfc079b1,
-  #dad08fb5,
-  #e7e6bab4
-);    border-radius:10px;
-    min-height: 100vh; 
-
+.previous-exp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2em;
+  /* CAMBIO CLAVE: Quitamos el width: 25% que la hacía flaca */
+  width: min(92%, 300px);   
+  /* Quitamos el height fijo para que no se corte el contenido */
+  min-height: auto; 
+  background: linear-gradient(270deg, #dfc079b1, #dad08fb5, #e7e6bab4);
+  border-radius: 10px;
 }
+
 .portfolio {
-  margin-top:0.5em;
+  margin-top:0.1em;
   text-align: center;
-  width: 95%;
-  padding: 3em 2%;
+  width: 100%;
+padding: 2em;
   border-radius: 10px;
   background:linear-gradient(
   270deg,
@@ -825,24 +815,46 @@ background:linear-gradient(
   #e7e6bab4
 );  border-radius:10px;
     min-height: 100vh; 
-
-
-
 }
 
 .portfolio p{
-  font-size: 30px;
-
+  font-size: 20px;
 }
-
 
 .portfolio  h2{
   color:rgb(40, 29, 29);
   font-weight: bold;
 }
+
+
+.drive-links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.drive-links a {
+  
+  text-decoration: none;
+  color: #170e01;
+  font-weight: bold;
+  font-size: clamp(14px, 1.2vw, 18px);
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.drive-links a:hover {
+  
+  background: rgba(255, 255, 255, 0.5);
+  transform: translateX(10px); /* Efecto sutil al pasar el mouse */
+}
 .experience-header{
   color:red;
 }
+
 
 .download-wrapper{
     display: flex;
@@ -851,8 +863,9 @@ background:linear-gradient(
     justify-content: center;
     width: 100%;
     margin-top: 20px; /* Ajusta según necesites */
-}
+    margin-bottom: clamp(20px, 5vw, 60px);
 
+}
 
 .image-container {
     display: inline-flex;
@@ -861,35 +874,6 @@ background:linear-gradient(
     position: relative;
     /* margin: 0 auto; */ /* Ya no es necesario con flex en el wrapper */
 }
-
-.drive-links {
-  text-align: center;
-  padding: 2em 0;
-}
-
-.drive-links a {
- 
-
-  display: inline-block;        /* para poder hacer transform */
-  margin: 0.5em 0;              /* separa los links */
-  font-size: clamp(12px, 2vw, 16px);
-  font-family: monospace;
-  font-weight: bold;
-  color:rgb(1, 0, 0);                  /* color normal, no azul */
-  text-decoration: none;
-  transition: transform 1.2s ease, color 0.6s ease;
-  word-break: break-word;
-  overflow-wrap: anywhere;
-}
-
-.drive-links a:hover {
-  transform: scale(1.15);       /* zoom al pasar el mouse */
-  color: #0ec95ce9;               /* color al hover, opcional */
-}
-
-
-
-
 .arrow {
     display: inline-block; /* El hover solo afecta al tamaño de la imagen */
     width: 60px; /* Ajusta el tamaño de la imagen aquí */
@@ -944,36 +928,38 @@ box-shadow:
   opacity: 1;                        /* aparece el texto al hover */
 }
 
-.experience-header {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: clamp(20px, 2vw, 30px);
-  font-weight: bold;
-  color: rgb(237,14,14);
-  cursor: pointer;
+.experience-link {
+    text-decoration: none; /* Quita el subrayado del link */
+}
 
-  /* Box visible */
-  border: 4px solid rgb(237,14,14);  /* borde rojo */
-  border-radius: 20px;                 /* esquinas redondeadas */
-  padding: 0.5rem 1rem;               /* espacio dentro del box */
-  background-color: rgba(255, 255, 255, 0.789);  /* fondo semitransparente */
-  transition: transform 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+.experience-header {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 0.6rem 1.2rem;
+    border: 2px solid rgb(237, 14, 14); /* Tu recuadro rojo */
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.866);
+  transition: transform 0.7s ease, color 0.6s ease;
+    cursor: pointer;
+        margin-bottom: clamp(20px, 5vw, 60px);
+
+}
+
+.experience-header span {
+    color: rgb(237, 14, 14);
+    font-weight: bold;
+    font-size: clamp(14px, 1.5vw, 18px);
+}
+
+.experience-header .icon {
+    width: 35px;
+    height: auto;
 }
 
 .experience-header:hover {
   transform: scale(1.05);
-  color: rgb(255,50,50);
-  box-shadow:
-    0 0 0 4px rgba(255, 255, 255, 0.08),
-    0 20px 40px rgba(0, 0, 0, 0.35);
-  transform: scale(1.04);
-}
-
-.experience-header .icon {
-  width: 32px;
-  height: 32px;
-  object-fit: contain;
+background-color: rgba(241, 155, 18, 0.938);
 }
 .row-3 {
   text-align: justify;
@@ -997,15 +983,13 @@ box-shadow:
 .zoom:hover{
    transform:scale(1.05);
    opacity: .8;
-
-
 }
 
 .lap {
   display: flex;
   flex-direction: column;
   flex: 1 1 32%;
-  width: min(100%, 300px); /* Esto permite que crezca hasta 300px y se mantenga centrada */
+  width: min(100%, 500px); /* Esto permite que crezca hasta 300px y se mantenga centrada */
   position: relative;
   border-radius: 2px;
   margin-bottom: 1em;
@@ -1013,7 +997,7 @@ box-shadow:
   align-items: center;
 }
 .lap img {
-  width: 40%;
+  width: 50%;
   height: auto; /* Usar auto es mejor que el 80% fijo del HTML */
   border-radius: 30px;
   object-fit: cover;
@@ -1021,7 +1005,7 @@ box-shadow:
 }
 .lap h2{
   text-align: justify;
-  font-size: 16px;
+  font-size: clamp(10px, 2vw, 12px);
   color: rgb(25, 1, 1);
 }
 .lap p {
@@ -1029,35 +1013,8 @@ box-shadow:
   padding: 0 1em;
   text-align: justify;
 }
-  
-@media (max-width: 768px) {
-  .genbox {
-    grid-template-columns: 1fr;
-    gap: 60px; 
-    padding-top: 100px;
-    align-items: start;
-  }
-
-  .portfolio, 
-  .previous-exp {
-    width: 100%; /* Asegura que ocupen todo el ancho disponible */
-  }
-
-  .section-title {
-    text-align: center;
-    display: inline-block; /* Centra los títulos en móvil */
-    margin: 0 auto 1.5em auto;
-  }
-}
 
 
-
-@media (max-width: 1024px) {
-  .about-grid {
-    grid-template-columns: repeat(2, 1fr);
-    max-width: fit-content;
-  }
-}
 
 /*------FOOTER------*/
 .contacto{
@@ -1172,9 +1129,7 @@ rgba(236, 124, 3, 0.456),
 rgba(230, 150, 2, 0.856),
 rgba(227, 155, 13, 0.914)
 );
-
 }
-
 
 .contact-name h1{
 display:inline-block;
@@ -1184,8 +1139,6 @@ color:white;
 font-weight:bold;
 font-size: clamp(16px,4vw,30px);
 white-space:nowrap;
-
-
 
 }
 
@@ -1275,14 +1228,6 @@ line-height:1.4;
 text-align: center;
 
 }
-
-
-
-
-
-
-
-
 
 .social-footer{
 display:flex;
@@ -1450,6 +1395,18 @@ justify-content:flex-end;
 
 }
 
+
+/*Media Queries */
+
+@media (max-width: 768px) {
+  .education-section {
+    grid-template-columns: 1fr;
+  }
+   .row-images h2{
+      font-size:20px;
+    }
+}
+
 @media(max-width: 768px) {
   .row, .row-2, .row-3 { flex-direction: column; align-items: center; }
   .course-col, .campus1, .campus2, .campus3, .cv, .lap { flex: 1 1 80%; max-width: 80%; margin-bottom: 1.5em; }
@@ -1492,11 +1449,85 @@ justify-content:flex-end;
   }
 }
 
-
 .cv-icon{
 font-size:18px;
 animation:arrowBounce 1.6s infinite;
 }
+
+@media (max-width: 768px) {
+  /* 1. Estructura Global */
+  .genbox {
+    grid-template-columns: 3fr 1fr !important; 
+    gap: 5px;
+    align-items: start;
+    padding-top: 50px;
+  }
+
+  /* 2. Ocultar Textos (Corregido: sin comas huérfanas) */
+  .previous-exp .section-title, 
+  .previous-exp .lap h2, 
+  .experience-header span,
+  .download-wrapper .hover-text {
+    display: none !important;
+  }
+
+  /* 3. Limpieza de Botones (Experience y Download) */
+  .experience-header, .image-container {
+    border: none !important;
+    background: none !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    width: auto !important;
+  }
+
+  .arrow, 
+  .experience-header .icon {
+    width: 40px !important; /* Valor fijo para consistencia */
+    height: auto;
+    margin: 0 auto;
+  }
+
+  /* 4. EL CAMBIO QUE NO REACCIONABA: IMÁGENES LAP */
+  /* Usamos un selector más fuerte para ganar la prioridad */
+  .row-3 .lap img {
+    /* Cambiamos el % por el mismo valor fijo */
+    width: 40px !important; 
+    height: 40px !important; /* Si quieres que sean círculos perfectos */
+    object-fit: contain;
+    border-radius: 10px; /* Ajusta a tu gusto */
+  }
+
+  /* 3. Ajustamos el contenedor para que no los apriete */
+  .lap {
+    width: 100% !important;
+    margin-bottom: 20px;
+  }
+  .previous-exp {
+    width: auto;
+    height: auto !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .section-title {
+    text-align: center;
+    margin: 0 auto 1.5em auto;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* rebote flecha */
 
@@ -1533,3 +1564,4 @@ font-size:22px;
 }
 
 }
+
